@@ -3,7 +3,7 @@ import { MotionDataType } from "../Action";
 function Control({ key, actionName, color }: MotionDataType) {
   return (
     <div
-      className=" p-2  hover:bg-gray-200 cursor-pointer hover:text-blue-400"
+      className=" p-2   hover:bg-gray-200 cursor-pointer hover:text-blue-400 h-100%"
       key={key}
     >
       <div className={`flex justify-center  `}>
