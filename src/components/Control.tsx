@@ -1,14 +1,15 @@
 import { FaCircle } from "react-icons/fa";
-
-function Control() {
+import { MotionDataType } from "../Action";
+function Control({ key, actionName, color }: MotionDataType) {
   return (
-    <div>
-      <div className=" m-2">
-        <div className=" flex justify-center">
-          <FaCircle size={24} />
-        </div>
-        <div className="text-sm pt-1">Motion</div>
+    <div
+      className=" p-2  hover:bg-gray-200 cursor-pointer hover:text-blue-400"
+      key={key}
+    >
+      <div className={`flex justify-center  `}>
+        <FaCircle size={24} color={color} className="border-2 rounded-full" />
       </div>
+      <div className="text-sm m-1 flex justify-center  ">{actionName}</div>
     </div>
   );
 }
