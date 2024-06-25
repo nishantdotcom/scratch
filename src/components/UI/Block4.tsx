@@ -1,6 +1,6 @@
 import { EventDataType } from "../../Action";
 
-function Block({
+function Block4({
   id,
   firstText,
   secondText,
@@ -12,7 +12,6 @@ function Block({
   handleOnDrag,
   blockConst,
 }: EventDataType) {
-  console.log(blockConst);
   return (
     <div
       className="relative"
@@ -39,37 +38,15 @@ function Block({
             data-id=",lkysxNSSFn:uV#]sWVU"
             data-argument-type="text number"
             data-shapes="argument round"
-            transform="translate(55.12036895751953,8)"
-          >
-            <path
-              className="blocklyPath blocklyBlockBackground"
-              stroke="#3373CC"
-              fill="#FFFFFF"
-              fillOpacity="1"
-              d="m 0,0 m 16,0 H 24 a 16 16 0 0 1 0 32 H 16 a 16 16 0 0 1 0 -32 z"
-            />
-            <g
-              className="blocklyEditableText"
-              transform="translate(8, 0)"
-              style={{ cursor: "text" }}
-            >
-              <text
-                className="blocklyText"
-                x="12"
-                y="18"
-                dominantBaseline="middle"
-                dy="0"
-                textAnchor="middle"
-              ></text>
-            </g>
-          </g>
+            transform="translate(68.12036895751953,8)"
+          ></g>
           <text
             className="blocklyText"
             y="2"
             textAnchor="middle"
             dominantBaseline="middle"
             dy="0"
-            x="19.560184478759766"
+            x="45.560184478759766"
             transform="translate(8, 24)"
             stroke="#FFFFFF"
             fill="#FFFFFF"
@@ -89,7 +66,7 @@ function Block({
             dominantBaseline="middle"
             dy="0"
             x={`${x}`}
-            transform="translate(103.12036895751953, 24)"
+            transform="translate(110.12036895751953, 24)"
             stroke="#FFFFFF"
             fill="#FFFFFF"
           >
@@ -97,7 +74,8 @@ function Block({
           </text>
         </g>
       </svg>
-      <input className=" absolute top-2.5 left-12 w-8 rounded-xl text-sm p-[3px]" />
+
+      <input className="  absolute top-2.5 left-[88px] w-8 rounded-xl text-sm p-[3px]" />
       {icons != null && (
         <span className="absolute  text-white top-4 left-[134px] ">
           {icons}
@@ -107,4 +85,4 @@ function Block({
   );
 }
 
-export default Block;
+export default Block4;

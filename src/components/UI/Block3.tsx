@@ -7,9 +7,20 @@ function Block3({
   length,
   x,
   icons,
+  stroke,
+  fill,
+  handleOnDrag,
+  blockConst,
 }: EventDataType) {
   return (
-    <div className="relative" draggable key={id}>
+    <div
+      className="relative"
+      draggable
+      key={id}
+      onDragStart={(e: React.DragEvent<HTMLDivElement>) => {
+        handleOnDrag?.(e, blockConst);
+      }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 180 62"
@@ -18,8 +29,8 @@ function Block3({
       >
         <g>
           <path
-            stroke="#3373CC"
-            fill="#4C97FF"
+            stroke={`${stroke}`}
+            fill={`${fill}`}
             fillOpacity="1"
             d={`M0,4A4,4 0 0,1 4,0H12c2,0 3,1 4,2l4,4c1,1 2,2 4,2h12c2,0 3,-1 4,-2l4,-4c1,-1 2,-2 4,${length},4 0 0,1 4,4v40a4,4 0 0,1 -4,4H48c-2,0 -3,1 -4,2l-4,4c-1,1 -2,2 -4,2h-12c-2,0 -3,-1 -4,-2l-4,-4c-1,-1 -2,-2 -4,-2H4a4,4 0 0,1 -4,-4z`}
           />
