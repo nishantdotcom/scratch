@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { EventDataType, EventType } from "../Action";
 import { MidPartType } from "../Action";
 import Block from "./UI/Block";
@@ -27,7 +26,7 @@ function MidPart({ handleOnDrop, handelDragOver, widgets }: MidPartType) {
       onDragOver={handelDragOver}
       key={100}
     >
-      {BlockData.map((data: EventDataType, index: any) => {
+      {BlockData.map((data: EventDataType) => {
         return data.type == "block1" ? (
           <Block
             id={data.id}
