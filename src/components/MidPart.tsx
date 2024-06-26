@@ -4,19 +4,28 @@ import Block from "./UI/Block";
 import Block2 from "./UI/Block2";
 import Block3 from "./UI/Block3";
 import Block4 from "./UI/Block4";
+import { LooksType } from "../Action";
 
 function MidPart({ handleOnDrop, handelDragOver, widgets }: MidPartType) {
-  console.log(widgets);
+  console.log(widgets, "getting all drops data");
   const BlockData: any = [];
 
   widgets.map((data: any) => {
     const y = EventType.filter((x) => {
       return x.blockConst == data;
     });
+    const zz = LooksType.filter((p) => {
+      return p.blockConst == data;
+    });
 
-    if (y != undefined) {
+    if (y != undefined && y[0] != undefined) {
       BlockData.push(y[0]);
     }
+    if (zz != undefined && zz[0] != undefined) {
+      BlockData.push(zz[0]);
+    }
+
+    console.log(BlockData);
   });
 
   return (

@@ -12,7 +12,7 @@ function Block({
   handleOnDrag,
   blockConst,
 }: EventDataType) {
-  console.log(blockConst);
+  // console.log(blockConst);
   return (
     <div
       className="relative"

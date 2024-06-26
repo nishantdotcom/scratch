@@ -7,14 +7,14 @@ import { EventType } from "./Action";
 import Block2 from "./components/UI/Block2";
 import Block3 from "./components/UI/Block3";
 import Block4 from "./components/UI/Block4";
-// import { LooksType } from "./Action";
+import { LooksType } from "./Action";
 import MidPart from "./components/MidPart";
 import { useState } from "react";
 import SidePart from "./components/SidePart";
 function App() {
   const [widgets, setWidgets] = useState<any>([]);
   const handleOnDrag = (e: React.DragEvent<HTMLDivElement>, x: string) => {
-    console.log(x);
+    //  console.log(x);
     if (x != "") {
       e.dataTransfer.setData("widgetType", x);
     }
@@ -139,7 +139,7 @@ function App() {
               <div className="flex justify-center font-semibold text-slate-800 m-2">
                 Looks
               </div>
-              {/* {LooksType.map((data) => {
+              {LooksType.map((data) => {
                 return data.type == "block4" ? (
                   <Block4
                     id={data.id}
@@ -188,7 +188,7 @@ function App() {
                 ) : (
                   <>hi</>
                 );
-              })} */}
+              })}
               <div className="flex justify-center font-semibold text-slate-800 m-2">
                 Sound
               </div>
@@ -206,7 +206,7 @@ function App() {
                 widgets={widgets}
               />
             </div>
-            <div className="w-[40%] bg-blue-300 h-[540px]  rounded-lg m-1">
+            <div className="w-[40%]  h-[540px]  rounded-lg m-1">
               <SidePart />
             </div>
           </div>
